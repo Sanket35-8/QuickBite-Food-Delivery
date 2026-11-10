@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Delicious Food Delivered to Your Door</title>
+  <meta name="description" content="QuickBite - Order delicious Indian food, biryani, pizzas, and desserts from top-rated local restaurants with superfast 30-minute delivery.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar" id="offers">
+    <div class="container">
+      ⚡ <strong>Special Launch Offer:</strong> Flat 50% OFF + Free Delivery on your first 3 orders! Use code: <span class="code-tag">QUICK50</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="nav-brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2M12 4L19.29 11.29C19.68 11.68 19.68 12.32 19.29 12.71L12.71 19.29C12.32 19.68 11.68 19.68 11.29 19.29L4.71 12.71C4.32 12.32 4.32 11.68 4.71 11.29L12 4M12 6.5C10.62 6.5 9.5 7.62 9.5 9C9.5 10.05 10.15 10.95 11.08 11.32C11.03 11.53 11 11.76 11 12C11 12.55 11.45 13 12 13S13 12.55 13 12C13 11.76 12.97 11.53 12.92 11.32C13.85 10.95 14.5 10.05 14.5 9C14.5 7.62 13.38 6.5 12 6.5Z"/>
+          </svg>
+        </div>
+        Quick<span class="highlight">Bite</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active" id="nav-link-home">Home</a>
+        <a href="restaurants.html" class="nav-link" id="nav-link-restaurants">Restaurants</a>
+        <a href="#offers" class="nav-link" id="nav-link-offers">Offers</a>
+        <a href="#contact" class="nav-link" id="nav-link-contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-nav-btn" id="nav-btn-cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-count-badge" id="nav-cart-count">3</span>
+        </a>
+        <a href="login.html" class="btn btn-primary btn-sm" id="nav-btn-login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Sign In
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Large Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Superfast 30-Minute Food Delivery
+          </div>
+          <h1 class="hero-title">
+            Delicious food, <br>
+            <span class="gradient-text">delivered to your door</span>
+          </h1>
+          <p class="hero-description">
+            Craving rich Awadhi Biryani, sizzling Paneer Tikka, or crispy Mysore Masala Dosa? Discover top-rated authentic local restaurants with seamless ordering and live tracking.
+          </p>
+
+          <!-- Search Bar with Location -->
+          <div class="hero-search-box">
+            <select class="search-location-select" id="hero-location-select" aria-label="Select City or Area">
+              <option value="delhi">📍 Connaught Place, New Delhi</option>
+              <option value="mumbai">📍 Bandra West, Mumbai</option>
+              <option value="bangalore">📍 Indiranagar, Bengaluru</option>
+              <option value="hyderabad">📍 Jubilee Hills, Hyderabad</option>
+              <option value="pune">📍 Koregaon Park, Pune</option>
+            </select>
+            <div class="search-input-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" class="search-input" id="hero-search-input" placeholder="Search for biryani, butter chicken, thali, or sweets...">
+            </div>
+            <a href="restaurants.html" class="btn btn-primary" id="hero-explore-btn">
+              Explore Food
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Search Tags -->
+          <div class="quick-tags">
+            <span class="quick-tags-label">Popular Searches:</span>
+            <a href="restaurants.html" class="tag-pill">Dum Biryani</a>
+            <a href="restaurants.html" class="tag-pill">Butter Chicken</a>
+            <a href="restaurants.html" class="tag-pill">Paneer Tikka</a>
+            <a href="restaurants.html" class="tag-pill">Masala Dosa</a>
+            <a href="restaurants.html" class="tag-pill">Momos</a>
+            <a href="restaurants.html" class="tag-pill">Gulab Jamun</a>
+          </div>
+
+          <!-- Hero Metrics / Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Partner Kitchens</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">28 Mins</span>
+              <span class="stat-label">Avg. Delivery</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.8 ★</span>
+              <span class="stat-label">App Rating</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100k+</span>
+              <span class="stat-label">Happy Foodies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Graphic Collage -->
+        <div class="hero-visual">
+          <div class="floating-badge badge-top-right">
+            <div class="float-icon delivery">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="float-text">
+              <h4>Express Delivery</h4>
+              <p>Under 30 Minutes Guaranteed</p>
+            </div>
+          </div>
+
+          <div class="hero-main-card">
+            <div class="hero-image-wrap">
+              <svg class="hero-food-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="300" rx="16" fill="#FFF2EC"/>
+                <circle cx="200" cy="150" r="110" fill="#FFE0D1"/>
+                <circle cx="200" cy="150" r="95" fill="#FFFFFF" stroke="#FF5722" stroke-width="4"/>
+                <!-- Dum Biryani Bowl Illustration -->
+                <ellipse cx="200" cy="150" rx="80" ry="60" fill="#F59E0B"/>
+                <ellipse cx="200" cy="145" rx="72" ry="52" fill="#FEF3C7"/>
+                <!-- Rice grains & Garnishing -->
+                <path d="M150 140 C170 120, 230 120, 250 140 C230 160, 170 160, 150 140 Z" fill="#FBBF24"/>
+                <circle cx="170" cy="135" r="12" fill="#B45309"/>
+                <circle cx="225" cy="140" r="14" fill="#9A3412"/>
+                <circle cx="195" cy="155" r="10" fill="#B45309"/>
+                <!-- Mint & Saffron strands -->
+                <path d="M185 130 C190 120, 210 125, 205 135" stroke="#16A34A" stroke-width="4" stroke-linecap="round"/>
+                <path d="M195 130 C205 125, 215 135, 205 140" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/>
+                <path d="M165 145 Q175 148 185 142" stroke="#DC2626" stroke-width="2"/>
+                <path d="M215 148 Q225 152 235 145" stroke="#DC2626" stroke-width="2"/>
+                <circle cx="140" cy="90" r="18" fill="#10B981" opacity="0.8"/>
+                <path d="M135 90 L138 93 L145 86" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <div class="hero-image-badge">
+                <span class="badge-rating">4.9 ★</span>
+                <span>Chef's Choice Special</span>
+              </div>
+            </div>
+            <div class="hero-card-details">
+              <h3 class="hero-card-title">Royal Awadhi Dum Biryani</h3>
+              <p class="hero-card-meta">
+                <span>Slow-cooked aromatic basmati rice</span> • <span>₹380 for two</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="float-icon discount">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+            </div>
+            <div class="float-text">
+              <h4>Flat 50% OFF</h4>
+              <p>On your favorite local orders</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Categories Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div>
+          <span class="section-tag">Taste the Diversity</span>
+          <h2 class="section-heading">Explore Food Categories</h2>
+          <p class="section-subtitle">From rich North Indian gravies to crispy South Indian dosas and mouth-watering desserts.</p>
+        </div>
+        <a href="restaurants.html" class="view-all-link" id="categories-view-all">
+          View All Cuisines
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1: Biryani -->
+        <a href="restaurants.html" class="category-card" id="cat-biryani">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9a9 9 0 0 0-9-9z"></path>
+              <path d="M8 12c1.5 2 3 2 4 0s2.5-2 4 0"></path>
+              <circle cx="12" cy="8" r="1" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <h3 class="category-name">Biryani</h3>
+          <span class="category-count">48 Places</span>
+        </a>
+
+        <!-- Category 2: North Indian -->
+        <a href="restaurants.html" class="category-card" id="cat-north-indian">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="8" cy="10" r="1.5" fill="currentColor"></circle>
+              <circle cx="16" cy="10" r="1.5" fill="currentColor"></circle>
+              <circle cx="12" cy="16" r="1.5" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <h3 class="category-name">North Indian</h3>
+          <span class="category-count">65 Places</span>
+        </a>
+
+        <!-- Category 3: South Indian -->
+        <a href="restaurants.html" class="category-card" id="cat-south-indian">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <ellipse cx="12" cy="12" rx="10" ry="6"></ellipse>
+              <path d="M2 12c0 3.31 4.48 6 10 6s10-2.69 10-6"></path>
+              <circle cx="12" cy="10" r="1" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <h3 class="category-name">South Indian</h3>
+          <span class="category-count">34 Places</span>
+        </a>
+
+        <!-- Category 4: Street Food / Chaat -->
+        <a href="restaurants.html" class="category-card" id="cat-street-food">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <circle cx="7" cy="12" r="4"></circle>
+              <circle cx="17" cy="12" r="4"></circle>
+              <path d="M11 12h2"></path>
+            </svg>
+          </div>
+          <h3 class="category-name">Chaat & Street</h3>
+          <span class="category-count">52 Places</span>
+        </a>
+
+        <!-- Category 5: Chinese & Momos -->
+        <a href="restaurants.html" class="category-card" id="cat-chinese">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M3 10h18M5 10v6a7 7 0 0 0 14 0v-6"></path>
+              <line x1="7" y1="4" x2="9" y2="10"></line>
+              <line x1="17" y1="4" x2="15" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="category-name">Momos & Asian</h3>
+          <span class="category-count">42 Places</span>
+        </a>
+
+        <!-- Category 6: Pizzas & Burgers -->
+        <a href="restaurants.html" class="category-card" id="cat-pizzas">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M12 2l10 17H2L12 2z"></path>
+              <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+              <circle cx="9" cy="16" r="1.5" fill="currentColor"></circle>
+              <circle cx="15" cy="16" r="1.5" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <h3 class="category-name">Pizzas & Fast Food</h3>
+          <span class="category-count">38 Places</span>
+        </a>
+
+        <!-- Category 7: Healthy Bowls -->
+        <a href="restaurants.html" class="category-card" id="cat-healthy">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9S3 15.97 3 11a9 9 0 0 1 9-9z"></path>
+              <path d="M12 7v10M8 11l4-4 4 4"></path>
+            </svg>
+          </div>
+          <h3 class="category-name">Healthy Bowls</h3>
+          <span class="category-count">20 Places</span>
+        </a>
+
+        <!-- Category 8: Desserts & Sweets -->
+        <a href="restaurants.html" class="category-card" id="cat-desserts">
+          <div class="category-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+              <path d="M12 2v4M6 8h12v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8z"></path>
+              <path d="M6 13h12"></path>
+            </svg>
+          </div>
+          <h3 class="category-name">Mithai & Desserts</h3>
+          <span class="category-count">29 Places</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Restaurants Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div>
+          <span class="section-tag">Curated for You</span>
+          <h2 class="section-heading">Popular Restaurants Near You</h2>
+          <p class="section-subtitle">Top hygiene certified partner kitchens delivering gourmet food in minutes.</p>
+        </div>
+        <a href="restaurants.html" class="view-all-link" id="restaurants-view-all">
+          Explore All 500+ Restaurants
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="restaurants-grid">
+        <!-- Restaurant 1 -->
+        <div class="restaurant-card">
+          <div class="restaurant-img-box">
+            <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="240" fill="#FEF3C7"/>
+              <ellipse cx="200" cy="120" rx="130" ry="75" fill="#D97706"/>
+              <ellipse cx="200" cy="115" rx="115" ry="60" fill="#FDE68A"/>
+              <circle cx="160" cy="110" r="16" fill="#92400E"/>
+              <circle cx="240" cy="115" r="18" fill="#78350F"/>
+              <circle cx="200" cy="125" r="14" fill="#92400E"/>
+              <path d="M175 100 Q195 90 215 105" stroke="#15803D" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div class="restaurant-promos">
+              <span class="badge badge-discount">50% OFF UPTO ₹100</span>
+            </div>
+            <button class="restaurant-bookmark-btn" aria-label="Save Restaurant">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="restaurant-info">
+            <div class="restaurant-header-row">
+              <h3 class="restaurant-name">Royal Awadh Biryani</h3>
+              <span class="badge-rating">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                4.8
+              </span>
+            </div>
+            <p class="restaurant-cuisines">Awadhi Biryani, Mughlai, Kebabs, Rolls</p>
+            <div class="restaurant-meta-row">
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                25-30 mins
+              </div>
+              <div class="meta-item">
+                ₹400 for two
+              </div>
+              <div class="meta-item">
+                <span class="food-type-icon non-veg"></span> Non-Veg
+              </div>
+            </div>
+            <div class="restaurant-action-row">
+              <a href="menu.html" class="btn btn-outline btn-block btn-sm">View Menu & Order</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-card">
+          <div class="restaurant-img-box">
+            <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="240" fill="#FFEDD5"/>
+              <circle cx="200" cy="120" r="85" fill="#EA580C"/>
+              <circle cx="200" cy="120" r="70" fill="#FF782D"/>
+              <ellipse cx="200" cy="120" rx="50" ry="30" fill="#FFF7ED"/>
+              <circle cx="180" cy="115" r="10" fill="#C2410C"/>
+              <circle cx="220" cy="125" r="10" fill="#C2410C"/>
+              <path d="M190 105 Q200 115 210 105" stroke="#16A34A" stroke-width="3"/>
+            </svg>
+            <div class="restaurant-promos">
+              <span class="badge badge-discount">FREE DELIVERY</span>
+            </div>
+            <button class="restaurant-bookmark-btn" aria-label="Save Restaurant">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="restaurant-info">
+            <div class="restaurant-header-row">
+              <h3 class="restaurant-name">Punjab Spice Grill</h3>
+              <span class="badge-rating">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                4.6
+              </span>
+            </div>
+            <p class="restaurant-cuisines">Butter Chicken, Dal Makhani, Tandoori Naan</p>
+            <div class="restaurant-meta-row">
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                30-35 mins
+              </div>
+              <div class="meta-item">
+                ₹500 for two
+              </div>
+              <div class="meta-item">
+                <span class="food-type-icon non-veg"></span> Non-Veg
+              </div>
+            </div>
+            <div class="restaurant-action-row">
+              <a href="menu.html" class="btn btn-outline btn-block btn-sm">View Menu & Order</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Restaurant 3 -->
+        <div class="restaurant-card">
+          <div class="restaurant-img-box">
+            <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="240" fill="#DCFCE7"/>
+              <ellipse cx="200" cy="120" rx="120" ry="45" fill="#15803D"/>
+              <ellipse cx="200" cy="115" rx="100" ry="30" fill="#CA8A04"/>
+              <circle cx="130" cy="115" r="18" fill="#F8FAFC"/>
+              <circle cx="270" cy="115" r="18" fill="#DC2626"/>
+            </svg>
+            <div class="restaurant-promos">
+              <span class="badge badge-offer-tag">PURE VEG</span>
+            </div>
+            <button class="restaurant-bookmark-btn" aria-label="Save Restaurant">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="restaurant-info">
+            <div class="restaurant-header-row">
+              <h3 class="restaurant-name">Dakshin Dosa Symphony</h3>
+              <span class="badge-rating">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                4.9
+              </span>
+            </div>
+            <p class="restaurant-cuisines">Mysore Masala Dosa, Filter Coffee, Idli Vada</p>
+            <div class="restaurant-meta-row">
+              <div class="meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                20-25 mins
+              </div>
+              <div class="meta-item">
+                ₹250 for two
+              </div>
+              <div class="meta-item">
+                <span class="food-type-icon veg"></span> Pure Veg
+              </div>
+            </div>
+            <div class="restaurant-action-row">
+              <a href="menu.html" class="btn btn-outline btn-block btn-sm">View Menu & Order</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotional Banner Section -->
+  <section class="section">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="promo-grid">
+          <div class="promo-content">
+            <h3>Weekend Feast Discount</h3>
+            <h2>Get Flat 50% OFF on Top Picks</h2>
+            <p>Treat your family to delicious Indian meals, sizzling tandoori starters, and authentic desserts at half the price.</p>
+            <a href="restaurants.html" class="btn btn-primary btn-lg" id="promo-claim-btn">
+              Claim Discount Now
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+          <div class="promo-code-card">
+            <div class="label">Use Promo Code At Checkout</div>
+            <div class="coupon-pill">QUICK50</div>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem;">Valid on all orders above ₹299. Max discount ₹150.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Trending Dishes Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div>
+          <span class="section-tag">Chef Specials</span>
+          <h2 class="section-heading">Trending Dishes Right Now</h2>
+          <p class="section-subtitle">Most loved delicacies ordered by food lovers across your city.</p>
+        </div>
+        <a href="menu.html" class="view-all-link">
+          Explore Full Menu
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- Dish 1 -->
+        <div class="dish-card">
+          <div class="dish-img-wrap">
+            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#FEF3C7"/>
+              <ellipse cx="150" cy="110" rx="90" ry="50" fill="#D97706"/>
+              <ellipse cx="150" cy="105" rx="80" ry="40" fill="#FDE68A"/>
+              <circle cx="130" cy="100" r="12" fill="#78350F"/>
+              <circle cx="170" cy="105" r="14" fill="#92400E"/>
+              <path d="M140 90 Q150 80 160 95" stroke="#15803D" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="dish-type-badge">
+              <span class="food-type-icon non-veg"></span>
+            </div>
+            <div class="dish-rating-tag">★ 4.9 (410)</div>
+          </div>
+          <div class="dish-body">
+            <h4 class="dish-title">Awadhi Dum Gosht Biryani</h4>
+            <p class="dish-restaurant-name">By Royal Awadh Biryani</p>
+            <p style="font-size: 0.85rem; color: var(--gray-500); margin-bottom: 1rem;">
+              Slow-cooked aromatic aged basmati rice layered with juicy marinated tender meat, saffron & spices.
+            </p>
+            <div class="dish-footer-row">
+              <div>
+                <span class="dish-price">₹380</span>
+                <span class="dish-price-orig">₹450</span>
+              </div>
+              <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart +</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="dish-card">
+          <div class="dish-img-wrap">
+            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#FFEDD5"/>
+              <ellipse cx="150" cy="110" rx="85" ry="45" fill="#EA580C"/>
+              <ellipse cx="150" cy="105" rx="75" ry="35" fill="#FF782D"/>
+              <rect x="130" y="95" width="20" height="20" rx="4" fill="#FEF3C7"/>
+              <rect x="155" y="90" width="22" height="22" rx="4" fill="#FEF3C7"/>
+              <ellipse cx="150" cy="105" rx="30" ry="15" fill="#FFF7ED" opacity="0.6"/>
+            </svg>
+            <div class="dish-type-badge">
+              <span class="food-type-icon veg"></span>
+            </div>
+            <div class="dish-rating-tag">★ 4.8 (580)</div>
+          </div>
+          <div class="dish-body">
+            <h4 class="dish-title">Shahi Paneer Butter Masala</h4>
+            <p class="dish-restaurant-name">By Punjab Spice Grill</p>
+            <p style="font-size: 0.85rem; color: var(--gray-500); margin-bottom: 1rem;">
+              Fresh cottage cheese cubes cooked in a rich, buttery tomato and cashew gravy with fresh cream.
+            </p>
+            <div class="dish-footer-row">
+              <div>
+                <span class="dish-price">₹260</span>
+                <span class="dish-price-orig">₹310</span>
+              </div>
+              <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart +</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="dish-card">
+          <div class="dish-img-wrap">
+            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#DCFCE7"/>
+              <ellipse cx="150" cy="110" rx="90" ry="35" fill="#CA8A04"/>
+              <circle cx="100" cy="105" r="14" fill="#FFFFFF"/>
+              <circle cx="200" cy="105" r="14" fill="#DC2626"/>
+            </svg>
+            <div class="dish-type-badge">
+              <span class="food-type-icon veg"></span>
+            </div>
+            <div class="dish-rating-tag">★ 4.9 (820)</div>
+          </div>
+          <div class="dish-body">
+            <h4 class="dish-title">Special Mysore Masala Dosa</h4>
+            <p class="dish-restaurant-name">By Dakshin Dosa Symphony</p>
+            <p style="font-size: 0.85rem; color: var(--gray-500); margin-bottom: 1rem;">
+              Crispy golden crepe smeared with spicy red garlic chutney and filled with seasoned potato mash.
+            </p>
+            <div class="dish-footer-row">
+              <div>
+                <span class="dish-price">₹180</span>
+                <span class="dish-price-orig">₹220</span>
+              </div>
+              <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart +</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 4 -->
+        <div class="dish-card">
+          <div class="dish-img-wrap">
+            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="300" height="200" fill="#FFE4E6"/>
+              <circle cx="150" cy="110" r="60" fill="#BE123C"/>
+              <circle cx="130" cy="105" r="18" fill="#881337"/>
+              <circle cx="170" cy="105" r="18" fill="#881337"/>
+              <circle cx="150" cy="130" r="18" fill="#881337"/>
+              <circle cx="150" cy="105" r="8" fill="#FDE047"/>
+            </svg>
+            <div class="dish-type-badge">
+              <span class="food-type-icon veg"></span>
+            </div>
+            <div class="dish-rating-tag">★ 4.9 (940)</div>
+          </div>
+          <div class="dish-body">
+            <h4 class="dish-title">Royal Gulab Jamun with Rabdi</h4>
+            <p class="dish-restaurant-name">By Sweet Bengal Confectionery</p>
+            <p style="font-size: 0.85rem; color: var(--gray-500); margin-bottom: 1rem;">
+              Warm golden milk solids dumplings dipped in rose-cardamom syrup, topped with rich malai rabdi.
+            </p>
+            <div class="dish-footer-row">
+              <div>
+                <span class="dish-price">₹140</span>
+                <span class="dish-price-orig">₹180</span>
+              </div>
+              <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart +</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose QuickBite Section -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-title-wrap center">
+        <span class="section-tag">Guaranteed Excellence</span>
+        <h2 class="section-heading">Why Foodies Love QuickBite</h2>
+        <p class="section-subtitle">We bring you unmatched taste, speed, and safety right to your doorstep.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="feature-title">Superfast Delivery</h3>
+          <p class="feature-desc">Our dedicated rider fleet ensures steaming hot food arrives at your door in under 30 minutes.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Hygiene Certified</h3>
+          <p class="feature-desc">Every partner restaurant complies with strict sanitization protocols and 100% FSSAI standards.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="feature-title">No Minimum Order</h3>
+          <p class="feature-desc">Order a single chai samosa combo or a lavish royal feast with zero minimum basket restrictions.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="feature-title">Live Order Tracking</h3>
+          <p class="feature-desc">Follow your meal from the kitchen prep counter to rider dispatch with real-time updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2M12 4L19.29 11.29C19.68 11.68 19.68 12.32 19.29 12.71L12.71 19.29C12.32 19.68 11.68 19.68 11.29 19.29L4.71 12.71C4.32 12.32 4.32 11.68 4.71 11.29L12 4M12 6.5C10.62 6.5 9.5 7.62 9.5 9C9.5 10.05 10.15 10.95 11.08 11.32C11.03 11.53 11 11.76 11 12C11 12.55 11.45 13 12 13S13 12.55 13 12C13 11.76 12.97 11.53 12.92 11.32C13.85 10.95 14.5 10.05 14.5 9C14.5 7.62 13.38 6.5 12 6.5Z"/></svg>
+            </div>
+            Quick<span class="highlight">Bite</span>
+          </a>
+          <p>QuickBite is an original frontend food delivery platform connecting food lovers with the most authentic local restaurants, kitchens, and sweet shops.</p>
+          <div style="display: flex; gap: 0.75rem;">
+            <span class="badge badge-primary">FSSAI Certified</span>
+            <span class="badge badge-secondary">100% Verified</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home Page</a></li>
+            <li><a href="restaurants.html" class="footer-link">Browse Restaurants</a></li>
+            <li><a href="menu.html" class="footer-link">Featured Menu</a></li>
+            <li><a href="cart.html" class="footer-link">View Cart & Checkout</a></li>
+            <li><a href="login.html" class="footer-link">Sign In / Register</a></li>
+            <li><a href="#offers" class="footer-link">Promotions & Coupons</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Popular Cuisines</h4>
+          <ul class="footer-links-list">
+            <li><a href="restaurants.html" class="footer-link">Dum Biryanis</a></li>
+            <li><a href="restaurants.html" class="footer-link">North Indian Gravies</a></li>
+            <li><a href="restaurants.html" class="footer-link">South Indian Tiffins</a></li>
+            <li><a href="restaurants.html" class="footer-link">Mughlai & Kebabs</a></li>
+            <li><a href="restaurants.html" class="footer-link">Chinese & Momos</a></li>
+            <li><a href="restaurants.html" class="footer-link">Mithai & Desserts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact & Help</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>QuickBite HQ, Connaught Place, New Delhi - 110001, India</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>support@quickbite.in</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 (011) 4567-8900</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 QuickBite Food Delivery Inc. All rights reserved.</div>
+        <div class="footer-student-credit">Designed & Built for College Full-Stack Web Development Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QuickBite JavaScript Logic -->
+  <script src="js/script.js"></script>
+</body>
+</html>

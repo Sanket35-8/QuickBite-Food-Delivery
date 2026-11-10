@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Food Cart | QuickBite Food Delivery</title>
+  <meta name="description" content="Review your cart items, apply discount coupons, select delivery address, and proceed to checkout securely on QuickBite.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      ⚡ <strong>Special Launch Offer:</strong> Flat 50% OFF + Free Delivery on your first 3 orders! Use code: <span class="code-tag">QUICK50</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="nav-brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2M12 4L19.29 11.29C19.68 11.68 19.68 12.32 19.29 12.71L12.71 19.29C12.32 19.68 11.68 19.68 11.29 19.29L4.71 12.71C4.32 12.32 4.32 11.68 4.71 11.29L12 4M12 6.5C10.62 6.5 9.5 7.62 9.5 9C9.5 10.05 10.15 10.95 11.08 11.32C11.03 11.53 11 11.76 11 12C11 12.55 11.45 13 12 13S13 12.55 13 12C13 11.76 12.97 11.53 12.92 11.32C13.85 10.95 14.5 10.05 14.5 9C14.5 7.62 13.38 6.5 12 6.5Z"/></svg>
+        </div>
+        Quick<span class="highlight">Bite</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link" id="nav-link-home">Home</a>
+        <a href="restaurants.html" class="nav-link" id="nav-link-restaurants">Restaurants</a>
+        <a href="index.html#offers" class="nav-link" id="nav-link-offers">Offers</a>
+        <a href="#contact" class="nav-link" id="nav-link-contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-nav-btn" id="nav-btn-cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span>Cart</span>
+          <span class="cart-count-badge">3</span>
+        </a>
+        <a href="login.html" class="btn btn-primary btn-sm" id="nav-btn-login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Sign In
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Bar -->
+  <div style="background: var(--white); border-bottom: 1px solid var(--gray-200);">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="menu.html">Royal Awadh Biryani</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Shopping Cart</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container">
+
+      <div class="section-title-wrap">
+        <div>
+          <h1 class="section-heading">Your Food Cart (3 Items)</h1>
+          <p class="section-subtitle">Review your selected items and choose your preferred delivery address.</p>
+        </div>
+      </div>
+
+      <!-- 2-Column Cart Grid -->
+      <div class="cart-layout-grid">
+
+        <!-- Left Column: Items & Delivery Address -->
+        <div class="cart-left-col">
+
+          <!-- Faculty Demonstration Notice Banner -->
+          <div class="faculty-demo-notice">
+            <div style="font-size: 1.4rem; line-height: 1;">🎓</div>
+            <div>
+              <span class="demo-tag">Faculty Viva Demo Mode</span>
+              <div style="font-weight: 700; margin-bottom: 0.2rem; color: #1E3A8A;">Interactive Client-Side Order Fulfillment Demonstration</div>
+              <div style="line-height: 1.45;">
+                Spring Boot REST backend serves Restaurants &amp; Food Catalog data. Order fulfillment options (Delivery ₹40 / Pickup ₹0 / Dine-in ₹0) and dynamic fee calculations are evaluated interactively in frontend client state for demonstration without persisting demo orders to MySQL.
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Details Banner -->
+          <div class="cart-rest-banner">
+            <div class="cart-rest-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2Z"/></svg>
+            </div>
+            <div class="cart-rest-details">
+              <h4>Royal Awadh Biryani</h4>
+              <p>Connaught Place, New Delhi • Estimated Delivery: 25-30 mins</p>
+            </div>
+            <a href="menu.html" class="btn btn-outline btn-sm" style="margin-left: auto;">+ Add Items</a>
+          </div>
+
+          <!-- Cart Items Card -->
+          <div class="cart-card-box">
+            <div class="cart-card-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Order Summary
+              </h3>
+              <span style="font-size: 0.85rem; color: var(--gray-500);">3 dishes selected</span>
+            </div>
+
+            <div class="cart-items-table">
+              <!-- Item 1 -->
+              <div class="cart-item-row">
+                <span class="food-type-icon non-veg"></span>
+                <div>
+                  <h4 class="cart-item-title">Awadhi Dum Gosht Biryani</h4>
+                  <div class="cart-item-subtitle">Portion: Regular • Served with Mint Raita & Salan</div>
+                </div>
+                <div class="cart-qty-counter">
+                  <button class="qty-btn" aria-label="Decrease quantity">-</button>
+                  <span class="qty-display">1</span>
+                  <button class="qty-btn" aria-label="Increase quantity">+</button>
+                </div>
+                <div class="cart-item-price">₹380.00</div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="cart-item-row">
+                <span class="food-type-icon veg"></span>
+                <div>
+                  <h4 class="cart-item-title">Shahi Paneer Butter Masala</h4>
+                  <div class="cart-item-subtitle">Extra Butter • Mild Spicy</div>
+                </div>
+                <div class="cart-qty-counter">
+                  <button class="qty-btn" aria-label="Decrease quantity">-</button>
+                  <span class="qty-display">1</span>
+                  <button class="qty-btn" aria-label="Increase quantity">+</button>
+                </div>
+                <div class="cart-item-price">₹260.00</div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="cart-item-row">
+                <span class="food-type-icon veg"></span>
+                <div>
+                  <h4 class="cart-item-title">Butter Garlic Naan (2 Pcs)</h4>
+                  <div class="cart-item-subtitle">Clay Oven Roasted with Fresh Garlic</div>
+                </div>
+                <div class="cart-qty-counter">
+                  <button class="qty-btn" aria-label="Decrease quantity">-</button>
+                  <span class="qty-display">1</span>
+                  <button class="qty-btn" aria-label="Increase quantity">+</button>
+                </div>
+                <div class="cart-item-price">₹100.00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Fulfillment Selection Card (3 Fulfillment Options) -->
+          <div class="cart-card-box" id="fulfillment-selection-card">
+            <div class="cart-card-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                Choose Order Fulfillment Option
+              </h3>
+              <span class="badge badge-secondary" id="active-fulfillment-badge">Delivery Selected</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--gray-500); margin-bottom: 1.25rem;">
+              Select how you'd like your food prepared and served. The delivery fee and bill total will update immediately.
+            </p>
+
+            <div class="fulfillment-options-grid">
+              <!-- Option 1: Delivery by QuickBite -->
+              <div class="fulfillment-card selected" data-fulfillment="delivery" id="opt-delivery" role="button" tabindex="0" aria-label="Delivery by QuickBite">
+                <div class="fulfillment-card-top">
+                  <div class="fulfillment-icon-wrap" title="Delivery by QuickBite">
+                    🛵
+                  </div>
+                  <div class="fulfillment-radio-indicator"></div>
+                </div>
+                <div class="fulfillment-card-title">Delivery by QuickBite</div>
+                <div class="fulfillment-card-desc">Food delivered to your doorstep by verified delivery riders</div>
+                <div class="fulfillment-fee-pill fee-charged">+ ₹40 Delivery Fee</div>
+              </div>
+
+              <!-- Option 2: Self Pickup / Takeaway -->
+              <div class="fulfillment-card" data-fulfillment="pickup" id="opt-pickup" role="button" tabindex="0" aria-label="Self Pickup / Takeaway">
+                <div class="fulfillment-card-top">
+                  <div class="fulfillment-icon-wrap" title="Self Pickup / Takeaway">
+                    🛍️
+                  </div>
+                  <div class="fulfillment-radio-indicator"></div>
+                </div>
+                <div class="fulfillment-card-title">Self Pickup / Takeaway</div>
+                <div class="fulfillment-card-desc">Customer collects freshly packed food from the restaurant</div>
+                <div class="fulfillment-fee-pill fee-free">₹0 Delivery Fee (FREE)</div>
+              </div>
+
+              <!-- Option 3: Dine-in -->
+              <div class="fulfillment-card" data-fulfillment="dinein" id="opt-dinein" role="button" tabindex="0" aria-label="Dine-in">
+                <div class="fulfillment-card-top">
+                  <div class="fulfillment-icon-wrap" title="Dine-in">
+                    🍽️
+                  </div>
+                  <div class="fulfillment-radio-indicator"></div>
+                </div>
+                <div class="fulfillment-card-title">Dine-in</div>
+                <div class="fulfillment-card-desc">Customer eats at the restaurant with reserved table service</div>
+                <div class="fulfillment-fee-pill fee-free">₹0 Delivery Fee (FREE)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- (1) Delivery Address Selection Card (Shown when Delivery is active) -->
+          <div class="cart-card-box" id="delivery-address-section">
+            <div class="cart-card-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Delivery Address
+              </h3>
+              <a href="#" class="view-all-link" style="font-size: 0.85rem;">+ Add New</a>
+            </div>
+
+            <div class="address-grid">
+              <!-- Home Address (Selected) -->
+              <div class="address-option-card selected">
+                <div class="address-type">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                  <span>Home (Primary)</span>
+                  <span class="badge badge-secondary" style="margin-left: auto; font-size: 0.7rem;">Selected</span>
+                </div>
+                <p class="address-text">
+                  Flat 402, Royal Residency, Barakhamba Road, Connaught Place, New Delhi - 110001
+                </p>
+                <div style="font-size: 0.8rem; color: var(--gray-500); margin-top: 0.4rem;">Ph: +91 98765 43210</div>
+              </div>
+
+              <!-- Work Address -->
+              <div class="address-option-card">
+                <div class="address-type">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                  <span>Workplace / Office</span>
+                </div>
+                <p class="address-text">
+                  Tower B, 7th Floor, DLF Cyber City, Sector 24, Gurugram, Haryana - 122002
+                </p>
+                <div style="font-size: 0.8rem; color: var(--gray-500); margin-top: 0.4rem;">Ph: +91 98765 43210</div>
+              </div>
+            </div>
+
+            <!-- Delivery Instructions -->
+            <div>
+              <div class="form-label" style="margin-bottom: 0.5rem;">Delivery Instructions for Rider:</div>
+              <div class="delivery-chips-row">
+                <span class="delivery-chip">🚪 Leave at door</span>
+                <span class="delivery-chip">🔕 Do not ring bell</span>
+                <span class="delivery-chip">📞 Avoid calling</span>
+                <span class="delivery-chip">🛡️ Contactless drop-off</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- (2) Self Pickup Location Card (Shown when Self Pickup is active) -->
+          <div class="cart-card-box" id="pickup-details-section" style="display: none;">
+            <div class="cart-card-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                Self Pickup / Takeaway Counter
+              </h3>
+              <span class="badge badge-secondary" style="font-size: 0.75rem;">₹0 Delivery Fee</span>
+            </div>
+            
+            <div class="fulfillment-info-box">
+              <div class="fulfillment-info-header">
+                <div>
+                  <strong>Royal Awadh Biryani - Pickup Counter</strong>
+                  <span style="display: inline-block; margin-left: 0.5rem; font-size: 0.75rem; color: var(--veg-color); font-weight: 700;">● Active Takeaway Station</span>
+                </div>
+                <span class="badge badge-primary" style="font-size: 0.75rem;">Ready in 15-20 Mins</span>
+              </div>
+              <p class="fulfillment-info-text">
+                📍 Shop 14-15, Inner Circle, Block C, Connaught Place, New Delhi - 110001
+              </p>
+              <div class="fulfillment-info-meta">
+                <span>📞 Restaurant Phone: +91 11 2341 5678 (Direct Kitchen Desk)</span>
+                <span>🕒 Pickup Counter Operating Hours: 11:00 AM – 11:30 PM (Mon - Sun)</span>
+                <span>⭐ Customer Collects Food: <strong>Zero Delivery Surcharge (₹0)</strong></span>
+              </div>
+              <div class="fulfillment-info-note">
+                🛍️ <strong>Takeaway Collection Protocol:</strong> Your order will be packed in heat-retaining containers and kept ready on the express pickup counter. Simply present your QuickBite Order ID to the staff to collect your meal immediately without queuing.
+              </div>
+            </div>
+          </div>
+
+          <!-- (3) Dine-in Details Card (Shown when Dine-in is active) -->
+          <div class="cart-card-box" id="dinein-details-section" style="display: none;">
+            <div class="cart-card-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+                Dine-in Table Service Details
+              </h3>
+              <span class="badge badge-secondary" style="font-size: 0.75rem;">₹0 Delivery Fee</span>
+            </div>
+
+            <div class="fulfillment-info-box">
+              <div class="fulfillment-info-header">
+                <div>
+                  <strong>Royal Awadh Biryani - Fine Dining Restaurant</strong>
+                  <span style="display: inline-block; margin-left: 0.5rem; font-size: 0.75rem; color: var(--veg-color); font-weight: 700;">● Seating Available</span>
+                </div>
+                <span class="badge badge-primary" style="font-size: 0.75rem;">Table on Arrival</span>
+              </div>
+              <p class="fulfillment-info-text">
+                📍 Shop 14-15, Inner Circle, Block C, Connaught Place, New Delhi - 110001
+              </p>
+              <div class="fulfillment-info-meta">
+                <span>👥 AC Dining Hall: Table reserved upon placing this dine-in request</span>
+                <span>🕒 Dine-in Service Hours: 12:00 PM – 11:30 PM</span>
+                <span>⭐ Customer Eats at Restaurant: <strong>Zero Delivery Surcharge (₹0)</strong></span>
+              </div>
+              <div class="fulfillment-info-note">
+                🍽️ <strong>Dine-in Service Protocol:</strong> When you arrive at the restaurant, inform the host/reception that you have a QuickBite Dine-in booking and share your Order ID. You will be escorted to your table, and food will be served freshly prepared from the tandoor.
+              </div>
+            </div>
+          </div>
+
+          <!-- Rider Tip Card -->
+          <div class="cart-card-box" id="rider-tip-section">
+            <div class="cart-card-header">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                Tip Your Delivery Partner
+              </h3>
+              <span style="font-size: 0.8rem; color: var(--gray-500);">100% goes to rider</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--gray-500); margin-bottom: 0.75rem;">
+              Thank your delivery partner for bringing your hot food on time in all weather conditions.
+            </p>
+            <div class="delivery-chips-row">
+              <span class="delivery-chip">₹20</span>
+              <span class="delivery-chip" style="border-color: var(--primary); background: var(--primary-light); color: var(--primary);">₹30 (Popular)</span>
+              <span class="delivery-chip">₹50</span>
+              <span class="delivery-chip">Custom</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Coupons, Bill Breakdown & Payment -->
+        <div class="cart-right-col">
+
+          <div class="bill-summary-box">
+            <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem;">Apply Discount Coupon</h3>
+
+            <!-- Coupon Input -->
+            <div class="coupon-input-wrap">
+              <input type="text" class="coupon-input" value="QUICK50" placeholder="Enter coupon code">
+              <button class="btn btn-secondary btn-sm">Apply</button>
+            </div>
+
+            <!-- Applied Coupon Notice -->
+            <div class="coupon-applied-alert">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Coupon <strong>'QUICK50'</strong> applied! You saved ₹100.00</span>
+            </div>
+
+            <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">Bill Details</h3>
+
+            <!-- Itemized Bill Table -->
+            <div class="bill-rows-list">
+              <div class="bill-row">
+                <span>Item Total</span>
+                <span>₹740.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Delivery Partner Fee (QuickBite)</span>
+                <div>
+                  <span>₹40.00</span>
+                </div>
+              </div>
+              <div class="bill-row">
+                <span>Restaurant Packaging Charges</span>
+                <span>₹25.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Taxes & GST (5%)</span>
+                <span>₹37.00</span>
+              </div>
+              <div class="bill-row discount-row">
+                <span>Coupon Discount (QUICK50)</span>
+                <span>- ₹100.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Platform Fee</span>
+                <span>₹5.00</span>
+              </div>
+            </div>
+
+            <!-- Total Amount -->
+            <div class="bill-row-total">
+              <span>To Pay</span>
+              <span style="color: var(--primary); font-size: 1.4rem;">₹747.00</span>
+            </div>
+
+            <!-- Payment Methods -->
+            <div style="margin-bottom: 1.25rem;">
+              <div class="form-label" style="margin-bottom: 0.6rem;">Select Payment Method:</div>
+              <div class="payment-options-list">
+                <label class="payment-method-card">
+                  <input type="radio" name="payment_method" checked>
+                  <span>⚡ Instant UPI (GPay / PhonePe / Paytm)</span>
+                </label>
+                <label class="payment-method-card">
+                  <input type="radio" name="payment_method">
+                  <span>💳 Credit / Debit Card (Visa, RuPay, Master)</span>
+                </label>
+                <label class="payment-method-card">
+                  <input type="radio" name="payment_method">
+                  <span>🏦 Net Banking (All Indian Banks)</span>
+                </label>
+                <label class="payment-method-card">
+                  <input type="radio" name="payment_method">
+                  <span>💵 Cash on Delivery (COD)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Checkout / Order Button -->
+            <a href="login.html" class="btn btn-primary btn-block btn-lg" id="cart-place-order-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              Proceed to Pay ₹747.00
+            </a>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.25rem; font-size: 0.8rem; color: var(--gray-500);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>100% Safe & Encrypted Payment</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Master Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2M12 4L19.29 11.29C19.68 11.68 19.68 12.32 19.29 12.71L12.71 19.29C12.32 19.68 11.68 19.68 11.29 19.29L4.71 12.71C4.32 12.32 4.32 11.68 4.71 11.29L12 4M12 6.5C10.62 6.5 9.5 7.62 9.5 9C9.5 10.05 10.15 10.95 11.08 11.32C11.03 11.53 11 11.76 11 12C11 12.55 11.45 13 12 13S13 12.55 13 12C13 11.76 12.97 11.53 12.92 11.32C13.85 10.95 14.5 10.05 14.5 9C14.5 7.62 13.38 6.5 12 6.5Z"/></svg>
+            </div>
+            Quick<span class="highlight">Bite</span>
+          </a>
+          <p>QuickBite is an original frontend food delivery platform connecting food lovers with authentic local restaurants.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home Page</a></li>
+            <li><a href="restaurants.html" class="footer-link">Browse Restaurants</a></li>
+            <li><a href="menu.html" class="footer-link">Featured Menu</a></li>
+            <li><a href="cart.html" class="footer-link">View Cart & Checkout</a></li>
+            <li><a href="login.html" class="footer-link">Sign In / Register</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Popular Cuisines</h4>
+          <ul class="footer-links-list">
+            <li><a href="restaurants.html" class="footer-link">Dum Biryanis</a></li>
+            <li><a href="restaurants.html" class="footer-link">North Indian Gravies</a></li>
+            <li><a href="restaurants.html" class="footer-link">South Indian Tiffins</a></li>
+            <li><a href="restaurants.html" class="footer-link">Mughlai & Kebabs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact & Help</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>QuickBite HQ, Connaught Place, New Delhi - 110001</span>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>support@quickbite.in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 QuickBite Food Delivery Inc. All rights reserved.</div>
+        <div class="footer-student-credit">Designed & Built for College Full-Stack Web Development Project</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QuickBite JavaScript Logic -->
+  <script src="js/script.js"></script>
+</body>
+</html>
